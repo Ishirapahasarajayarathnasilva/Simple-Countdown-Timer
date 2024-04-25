@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(https://images.unsplash.com/photo-1513297887119-d46091b24bfa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+
+}
+
+h1{
+
+    font-weight: normal;
+    font-size: 4rem;
+    margin-top: 5rem;
+    text-transform: uppercase;
+}
+
+
+.countdown-container{
+    display: flex;
+
+}
+
+.big-text{
+    font-weight: bold;
+    font-size: 6rem;
+    line-height: 1;
+    margin: 0 2rem;
+}
+
+.count-el {
+    text-align: center;
+    
+}
+
+.count-el span{
+    font-size: 1.3rem;
+}
+
+.snowflake {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #fff;
+    animation: fall 5s linear infinite;
+    left: calc(50% - 5px + var(--left-offset));
+    z-index: -1
+}
+
+@keyframes fall {
+    0% {
+        top: -10px;
+    }
+    100% {
+        top: 110%;
+    }
+}
+
+.snowflake:nth-of-type(1) {
+    --left-offset: -50%;
+    animation-delay: 1s;
+    animation-duration:9s;
+}
+
+.snowflake:nth-of-type(2) {
+    --left-offset: 50%;
+    animation-delay: 2s;
+    animation-duration: 10s;
+}
+
+
+
+
+/* Add more snowflakes with different delays and durations */
